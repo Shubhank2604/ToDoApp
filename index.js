@@ -60,18 +60,6 @@ app.post('/create-todo', function (req, res) {
     )
 });
 
-// THIS IS DELETE URL FOR SINGLE TASK FROM DATABASE
-app.get('/delete_todo_single', function(req, res) {
-    let id = req.query.id;
-    Todo.findByIdAndDelete(id, function(err){
-        if(err) {
-            console.log("Error");
-            return;
-        }
-        return res.redirect('back');
-    });
-});
-
 // THIS IS URL TO DELETE THE MULTIPLE ITEM FROM DATABASE
 app.post('/delete-todo', function(req, res) {
     let ids = req.body.task;
