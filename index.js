@@ -60,7 +60,7 @@ app.post('/create-todo', function (req, res) {
     )
 });
 
-// THIS IS URL TO DELETE THE MULTIPLE ITEM FROM DATABASE
+// THIS IS URL TO DELETE ITEMS FROM DATABASE
 app.post('/delete-todo', function(req, res) {
     let ids = req.body.task;
     // if single task is to be deleted
